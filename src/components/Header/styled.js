@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import Background from "./Imagens/recipes.png"
+import { VscThreeBars } from "react-icons/vsc"
+import Background from "./Imagens/recipes.png";
 
 export const ContHeader = styled.section`
     width:97%;
-    height: 110vh;
+    height: 100vh;
     margin: 1.5%;
     background-image: url(${Background});
     background-size: cover;
@@ -11,6 +12,7 @@ export const ContHeader = styled.section`
     background-repeat: no-repeat;
     color:#373737;
 `
+
 export const ContNav = styled.div`
     width:100%;
     padding:2% 4% 0% 4%;
@@ -18,7 +20,22 @@ export const ContNav = styled.div`
     justify-content: space-between;
 `
 export const Navegation = styled.nav`
-width:50%;
+    width:50%;
+    position: relative;
+    @media(max-width:800px) {
+        width:10vw; 
+        position: absolute;
+        top:0; right: 0;
+    }
+
+`
+export const Menu = styled(VscThreeBars)`
+    width:5%; height: 10%;
+    position:relative;
+    left:0%; bottom: 0;
+    display: none;
+    @media(max-width:800px) {display: grid; }
+
 `
 export const List = styled.ul`
     width:100%;
@@ -34,6 +51,7 @@ li{
     :hover{
         outline:solid #373737 0.3vw;
     }
+    @media(max-width:800px) {display: none;}
 }
 `
 export const ContRecipes = styled.div`
