@@ -12,11 +12,18 @@ export const Subscribe = styled.div `
     h3{
         letter-spacing: 0.2vw;
         font-size: 2vw;
+        @media (max-width:800px){
+            font-size: 5vw;
+            letter-spacing: 1vw;
+        }
     }
     p{
         letter-spacing: 0.1vw;
         word-spacing: 0.3vw;
-    }
+        @media (max-width:800px){
+            font-size: 3.5vw;
+            word-spacing: 1vw;
+    }}
 `
 export const ContInp = styled.div `
     width: 100%;
@@ -30,11 +37,18 @@ export const ContInp = styled.div `
         width: 30%;
         border:none;
         padding: 1.5%;
-    }
+        cursor: pointer;
+        outline: none;
+        @media (max-width:800px){
+            width: 93%;
+            padding: 4.5%;
+            font-size: 3vw;
+            height: auto;
+        }}
     button{
         width:12%;
         padding: 0.5%;
-        letter-spacing: 0.1vw;
+        letter-spacing: 0.5vw;
         font-weight:bolder;
         border:none;
         background-color: transparent;
@@ -52,6 +66,7 @@ export const ContInp = styled.div `
     position: absolute;
     top:0; left:0;
     background-color: #373737;
+    @media (max-width:800px) { height: 12vw; }
     }
     :hover::before {
     position:absolute;
@@ -59,5 +74,11 @@ export const ContInp = styled.div `
     transition: 0.4s linear;
     z-index: -1;
     }
-}
+    @media (max-width:800px){
+        padding: 2.9%;
+        width:93%;
+        letter-spacing: 1.5vw;
+        font-size: 4vw;  
+        outline: solid #373737 0.6vw;
+    }}
 `
